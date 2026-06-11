@@ -57,7 +57,7 @@ Through this project, I gained hands-on experience in:
 * Unsplash API for providing high-quality images.
 * CodeAlpha Internship Program for the project opportunity.
 
-* Live Demo:
+* Live Demo: hemach838-byte.github.io/codealpha_tasks/
 
 ## 👨‍💻 Author
 

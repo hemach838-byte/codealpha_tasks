@@ -3,35 +3,46 @@ const container = document.querySelector(".gallery");
 const count = document.querySelector(".count");
 let allImages = [];
 let currentIndex = 0;
-const favourites = [];
+const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+updateCount();
 async function getImages(query) {
   const res = await fetch(
     `https://api.unsplash.com/search/photos?query=${query}&client_id=${accessKey}`,
   );
   const data = await res.json();
-  allImages = data.results;
-  data.results.forEach((img) => {
+
+  data.results.forEach((img, index) => {
     allImages.push(img);
     const imageIndex = allImages.length - 1;
     const wrapper = document.createElement("div");
     wrapper.classList.add("image-card");
     //heart icon
     const heart = document.createElement("i");
-    heart.classList.add("fa-regular", "fa-heart", "heart-icon");
+    heart.classList.add("fa-heart", "heart-icon");
+    if (favourites.includes(img.urls.small)) {
+      heart.classList.add("fa-solid");
+    } else {
+      heart.classList.add("fa-regular");
+    }
     heart.addEventListener("click", () => {
-      heart.classList.toggle("fa-solid");
-      heart.classList.toggle("fa-regular");
-
       if (heart.classList.contains("fa-solid")) {
-        if (!favourites.includes(img.urls.small)) {
-          favourites.push(img.urls.small);
-        }
-      } else {
+        heart.classList.remove("fa-solid");
+        heart.classList.add("fa-regular");
+
         const index = favourites.indexOf(img.urls.small);
         if (index > -1) {
           favourites.splice(index, 1);
         }
+      } else {
+        heart.classList.remove("fa-regular");
+        heart.classList.add("fa-solid");
+
+        if (!favourites.includes(img.urls.small)) {
+          favourites.push(img.urls.small);
+        }
       }
+
+      saveFavourites();
       updateCount();
     });
     wrapper.appendChild(heart);
@@ -51,6 +62,7 @@ async function getImages(query) {
 
 async function loadAllCategories() {
   container.innerHTML = "";
+  allImages = [];
 
   const categories = [
     "nature",
@@ -72,6 +84,7 @@ categoryItems.forEach((item) => {
   item.addEventListener("click", async () => {
     const query = item.dataset.category;
     container.innerHTML = "";
+    allImages = [];
     if (query === "all") {
       await loadAllCategories();
     } else {
@@ -109,6 +122,9 @@ function updateCount() {
   } else {
     counter.style.display = "none";
   }
+}
+function saveFavourites() {
+  localStorage.setItem("favourites", JSON.stringify(favourites));
 }
 //images
 const imageViewer = document.querySelector(".image-viewer");

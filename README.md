@@ -1,17 +1,20 @@
-# 📸 Photo Gallery
+# 📸 Image Gallery Web Application
 
-A modern and responsive Image Gallery web application built using HTML, CSS, and JavaScript. This project was developed as part of the CodeAlpha Internship Program.
+A modern and responsive Image Gallery built using HTML, CSS, and JavaScript. The application fetches images dynamically from the Unsplash API and provides a smooth user experience with category filtering, favourites management, image preview modal, and theme switching.
 
 ## 🚀 Features
 
-* 🔍 Search images using the Unsplash API
-* 🖼️ Browse images by categories
-* ❤️ Add images to favourites
-* 🌙 Light/Dark theme toggle
-* 🔎 Full-screen image viewer
-* ⬅️➡️ Previous and Next image navigation
-* 📱 Fully responsive design
-* 🎨 Smooth animations and modern UI
+* Search images using keywords
+* Browse images by categories
+* Responsive image gallery layout
+* Image preview modal
+* Next and Previous image navigation
+* Add images to favourites
+* Remove images from favourites
+* Favourite images saved using Local Storage
+* Dark/Light Theme Toggle
+* Smooth animations and hover effects
+* Mobile-friendly responsive design
 
 ## 🛠️ Technologies Used
 
@@ -19,48 +22,43 @@ A modern and responsive Image Gallery web application built using HTML, CSS, and
 * CSS3
 * JavaScript (ES6)
 * Unsplash API
+* Local Storage
 * Font Awesome
 
 ## 📂 Project Structure
 
 ├── index.html
-├── script.js
-├── api.js
 ├── navbar.css
 ├── categories.css
 ├── gallery.css
 ├── light-theme.css
+├── script.js
+└── api.js
 
-## ⚙️ How It Works
+## 📸 Screenshots
 
-1. Images are fetched dynamically from the Unsplash API.
-2. Users can search for any image category.
-3. Category buttons allow quick filtering.
-4. Favourite images are stored during the session.
-5. Clicking an image opens a full-screen viewer.
-6. Users can switch between dark and light themes.
+Add screenshots of your application here.
 
 ## 🎯 Learning Outcomes
 
-Through this project, I gained hands-on experience in:
+Through this project I learned:
 
-* API Integration
-* Asynchronous JavaScript (Fetch API)
+* API Integration using Fetch API
 * DOM Manipulation
 * Event Handling
+* Local Storage Management
 * Responsive Web Design
 * Theme Switching
-* Dynamic UI Development
+* Image Modal Implementation
+* JavaScript Array Methods
 
-## 🙏 Acknowledgements
+## 👨‍💻 Internship Project
 
-* Unsplash API for providing high-quality images.
-* CodeAlpha Internship Program for the project opportunity.
+This project was developed as part of the CodeAlpha Frontend Development Internship Program.
 
-* Live Demo: hemach838-byte.github.io/codealpha_tasks/
+Live Demoo:
 
-## 👨‍💻 Author
+## 🔗 Author
 
 Hema
-
-B.Tech CSE Student | Aspiring Web Developer
+B.Tech CSE Student | Aspiring Frontend & Web Developer

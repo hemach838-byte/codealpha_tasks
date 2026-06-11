@@ -56,7 +56,7 @@ Through this project I learned:
 
 This project was developed as part of the CodeAlpha Frontend Development Internship Program.
 
-Live Demoo:
+Live Demo: hemach838-byte.github.io/codealpha_tasks/
 
 ## 🔗 Author
 

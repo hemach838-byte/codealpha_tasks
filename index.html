@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="navbar.css" class="css" />
+    <link rel="stylesheet" href="categories.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="light-theme.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-image"></i>
+        <div class="logo-text">
+          <h2>Photo<span>Gallery</span></h2>
+          <p>Capture Moments, Cherish Forever</p>
+        </div>
+      </div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search images..." class="input" />
+        <button class="search-btn">Search</button>
+      </div>
+
+      <div class="favouites-toggle-wrapper">
+        <div class="favourites">
+          <i class="fa-solid fa-heart wish-container"></i>
+          <span>Favourites</span>
+          <div class="counter">0</div>
+        </div>
+
+        <div class="toggle-content">
+          <i class="fa-solid fa-sun"></i>
+          <input type="checkbox" id="toggle" />
+          <label for="toggle" class="switch"></label>
+          <i class="fa-solid fa-moon"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="categories-sec">
+      <ul class="categories">
+        <li data-category="all">
+          <i class="fa-solid fa-table-cells-large"></i> All
+        </li>
+        <li data-category="nature">
+          <i class="fa-brands fa-canadian-maple-leaf"></i> Nature
+        </li>
+        <li data-category="mountains">
+          <i class="fa-solid fa-mountain"></i> Mountains
+        </li>
+        <li data-category="waterfalls">
+          <i class="fa-solid fa-droplet"></i> Waterfalls
+        </li>
+        <li data-category="animals"><i class="fa-solid fa-paw"></i> Animals</li>
+        <li data-category="cars"><i class="fa-solid fa-car"></i> Cars</li>
+        <li data-category="architecture">
+          <i class="fa-solid fa-building"></i> Architecture
+        </li>
+        <li data-category="people">
+          <i class="fa-solid fa-people-line"></i>People
+        </li>
+      </ul>
+    </div>
+    <div class="image-count">Showing <span class="count">0</span> images</div>
+    <main>
+      <div class="gallery"></div>
+    </main>
+    <div class="wishbox" id="wish-image"></div>
+    <div class="image-viewer">
+      <span class="close-btn">&times;</span>
+      <button class="prev-btn">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img class="viewer-img" src="" alt="Preview" />
+      <button class="next-btn">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
